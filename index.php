@@ -2,6 +2,20 @@
 
 //1.
 
+echo (int) 4.7;
+echo "<br>";
+echo (string) 4.7;
+#echo (array) 4.7; #error
+echo "<br>";
+#$a = (float) "4.7";
+#echo "<br>";
+echo (double) 4.7;
+#echo gettype($a);
+echo "<br>";
+echo (bool) 4.7;
+echo "<br>";
+#echo (null) 4.7; #error
+
 //2.
 
 // for ($i=1; $i <= 100; $i++) { 
