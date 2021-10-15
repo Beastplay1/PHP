@@ -1,40 +1,51 @@
 <?php 
-
+session_start();
 print_r($_POST);
-$login = $_REQUEST['login'];
-$password = $_REQUEST['password'];
+$string = $_REQUEST['string'];
+$str = $_REQUEST['str'];
 
-// $a = substr($login, -3, 3);
-// $b = substr($login, 0,3);
+$length = strlen($str);
 
-// if ($a === $password || $b === $password) {
-// 	$msg = "Welcome!";
-// }
-// else{
-// 	$msg = "Try again";
-// }
+// $a = substr($string, 0, $length);
+// $b = substr($string, -$length);
 
-// $pos = strpos($login, $password);
-
-// if ($pos !== false) {
-// 	$msg = "Welcome!";
-// }
-// else{
-// 	$msg = "Try again";
+// if ($a === $str) {
+// 	$msg = "gtnvel e skzbum";
 // }
 
-$cmp = strncmp($login, $password, 3);
-if ($cmp === 0) {
-	$msg = "Welcome!";
-}
-else{
-	$msg = "Try again";
+// if($b === $str){
+// 	$msg = "gtnvel e verjum";
+// }
+
+$pos = strpos($string, $str);
+
+if ($pos === 0) {
+	$msg = "gtnvel e skzbum";
 }
 
-$cmpr = strrev($login);
-$cmpr = strncmp($login, $password, 3);
+$pos = strrpos($string, $str);
 
-header("location:index4.php?msg=$msg" );
+if ($pos === strlen($string) - $length) {
+	
+	$msg = "gtnvel e verjum";
+}
+
+
+// $cmp = strncmp($string, $str, $length);
+// if ($cmp === 0) {
+// 	$msg = "gtnvel e skzbum";
+// }
+
+// $cmpr = strrev($string);
+// $cmpp = strrev($str);
+
+// $cmpr = strncmp($cmpr, $cmpp, $length);
+// if ($cmpr === 0) {
+// 	$msg = "gtnvel e verjum";
+// }
+
+$_SESSION['msg'] = $msg;
+header("location:index4.php" );
 
 
  ?>
