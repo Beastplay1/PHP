@@ -18,7 +18,7 @@ class myclass {
 				$this->$end = $b[0];
 			}
 		    else{
-			   echo 'mer classi mej tenc popoxakan chka';
+			   echo 'Aydpisi funkcia goyutyun chuni';
 		    }
 		}
 		elseif($start==="get"){
@@ -26,11 +26,11 @@ class myclass {
 				return $this->$end;
 			}
 			 else{
-			   echo 'mer classi mej tenc popoxakan chka';
+			   echo 'Aydpisi funkcia goyutyun chuni';
 		    }
 		}
 		else{
-			echo 'mer classi mej tenc funkcia chka';
+			echo 'Aydpisi funkcia goyutyun chuni';
 		}
 
 	}
@@ -48,38 +48,3 @@ echo $obj-> getname();
 echo $obj-> getsurname();
 // echo "<pre>";
 print_r($obj);
-
-// __construct();
-// __destruct();
-// __autoload();
-// __tostring();
-// __set();
-// __get();
-// __isset();
-// __unset();
-// __call();
-// __callStatic();
-// __invoke();
-// __sleep();
-// __wakeup();
-//__clone();
-trait a{
-	public function getx(){
-		return $this->x;
-	}
-	public function show(){
-		echo  $this->x;
-	}
-}
-class newclass{
-	public $x;
-	use a;//ogtagorcelu hamar kanchum enq trait i anun@,u inch ka trait i mej includea anum 
-}
-
-
-//avtostayna enq sarqelu 
-//bernatarneri hamar 
-//mardatarneri hamar
-class parking{
-	
-}
